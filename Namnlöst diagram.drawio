@@ -1,9 +1,66 @@
-<mxfile host="app.diagrams.net" modified="2024-01-15T07:34:31.946Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" version="22.1.18" etag="X4I6CSnYhVqOm4qpT0uI" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-15T08:29:27.909Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="zSAfQ01oPmQ1C3PsKQ-4" version="22.1.18" type="github">
   <diagram name="Sida-1" id="oGAXZox3ZT5cnkREF7Ml">
-    <mxGraphModel>
+    <mxGraphModel dx="1046" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EaWj0TjMco-uiDy2oSEa-1" target="EaWj0TjMco-uiDy2oSEa-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-1" value="Start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="30" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EaWj0TjMco-uiDy2oSEa-2" target="EaWj0TjMco-uiDy2oSEa-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-2" value="Skriv ut menyn för karaktärerna: C1, C2, C3" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EaWj0TjMco-uiDy2oSEa-4" target="EaWj0TjMco-uiDy2oSEa-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EaWj0TjMco-uiDy2oSEa-4" target="EaWj0TjMco-uiDy2oSEa-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EaWj0TjMco-uiDy2oSEa-4" target="EaWj0TjMco-uiDy2oSEa-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EaWj0TjMco-uiDy2oSEa-4" target="EaWj0TjMco-uiDy2oSEa-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-4" value="Ta in val från användaren" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="220" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-6" value="Om valt C1: HEAVY&lt;br&gt;Skriv; &lt;br&gt;Liv: 800 hp&lt;br&gt;Attack: 4/10" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="220" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EaWj0TjMco-uiDy2oSEa-9" target="EaWj0TjMco-uiDy2oSEa-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-9" value="Om valt C2: MEDIUM&lt;br&gt;Skriv;&lt;br&gt;Liv: 600 hp&lt;br&gt;Attack: 7/10" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-11" value="Om valt C3: LIGHT&lt;br&gt;Skriv;&lt;br&gt;Liv: 400 hp&lt;br&gt;Attack: 6/10&lt;br&gt;+Perk: Högre träffchans!" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="225" width="120" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EaWj0TjMco-uiDy2oSEa-13" target="EaWj0TjMco-uiDy2oSEa-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="EaWj0TjMco-uiDy2oSEa-13" target="EaWj0TjMco-uiDy2oSEa-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="EaWj0TjMco-uiDy2oSEa-13" target="EaWj0TjMco-uiDy2oSEa-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-13" value="Skriv ut menyn för Vapen: Svärd, Spjut" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-15" value="Om välj Svärd:&lt;br&gt;Skriv;&lt;br&gt;Attack: +1&lt;br&gt;Träffchans:+1" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="EaWj0TjMco-uiDy2oSEa-18" value="Om välj Spjut:&lt;br&gt;Skriv;&lt;br&gt;Attack:+3&lt;br&gt;Träffchans: -1" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="640" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
