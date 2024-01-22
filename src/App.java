@@ -53,7 +53,35 @@ public class App {
                     System.out.println("Välj karaktär 1, 2 eller 3");
                     break;
             }
+            System.out.println("Karaktären du har valt måste såklart få ett vapen också!");
+            Thread.sleep(1000);
+            System.out.println("Vapen du kan välja mellan är:");
+            Thread.sleep(1000);
+            System.out.println("1. Svärd");
+            Thread.sleep(1000);
+            System.out.println("2. Spjut");
+            Thread.sleep(1000);
+            System.out.println("Ditt val");
+            int vapen = tb.nextInt();
+            switch (vapen) {
+                case 1:
+                    System.out.println("Du valde Svärdet");
+                    Thread.sleep(1000);
+                    System.out.println("Attack: +1");
+                    Thread.sleep(1000);
+                    System.out.println("Träffchans: +1");
+                    break;
+
+                case 2:
+                    System.out.println("Du valde Spjutet");
+                    Thread.sleep(1000);
+                    System.out.println("Attack: +3");
+                    Thread.sleep(1000);
+                    System.out.println("Träffchans: -1");
             
+                default:
+                    System.out.println("Välj vapen 1 eller 2");
+                    break;
             }
         }
             
