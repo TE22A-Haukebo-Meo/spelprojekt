@@ -1,6 +1,5 @@
+import java.util.Random;
 import java.util.Scanner;
-
-import javax.annotation.processing.SupportedOptions;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -15,6 +14,7 @@ public class App {
             System.out.println("3. Heavy");
             System.out.println("Ditt val: (siffra)");
             int karaktär = tb.nextInt();
+            Random rand = new Random();
             switch (karaktär) {
                 case 1:
                     System.out.println("Du har valt karaktären light");
@@ -24,9 +24,6 @@ public class App {
                     System.out.println("Attack = 6/10");
                     Thread.sleep(1000);
                     System.out.println("+Perk: Större träffchans!");
-                    int light_hp = 400;
-                    int light_dmg = 6;
-                    //dmg står för damage, skada
                     break;
                 
                 case 2:
@@ -46,21 +43,23 @@ public class App {
                     Thread.sleep(1000);
                     System.out.println("Attack = 4/10");
                     int heavy_hp = 800;
-                    int heavy_dmg = 4/10;
+                    int heavy_dmg = 4;
                     break;
             
                 default:
                     System.out.println("Välj karaktär 1, 2 eller 3");
                     break;
             }
+            int player_dmg = 5;
+            //dmg står för damage, skada
+            int player_hp = 500;
+            Thread.sleep(1500);
             System.out.println("Karaktären du har valt måste såklart få ett vapen också!");
             Thread.sleep(1000);
             System.out.println("Vapen du kan välja mellan är:");
             Thread.sleep(1000);
             System.out.println("1. Svärd");
-            Thread.sleep(1000);
             System.out.println("2. Spjut");
-            Thread.sleep(1000);
             System.out.println("Ditt val");
             int vapen = tb.nextInt();
             switch (vapen) {
@@ -83,6 +82,86 @@ public class App {
                     System.out.println("Välj vapen 1 eller 2");
                     break;
             }
+            System.out.println("Bra jobbat! Du har nu byggt din karaktär! Såhär blev den:");
+            Thread.sleep(1500);
+            if (karaktär == 1 && (vapen == 1)) {
+                System.out.println("Light Swordsman");
+                Thread.sleep(1000);
+                System.out.println("Liv = 400 hp");
+                Thread.sleep(1000);
+                System.out.println("Attack: 7/10");
+                Thread.sleep(1000);
+                System.out.println("Träffchans: 8/10");
+                player_dmg = 400;
+                player_hp = 400;
+            }
+            else if (karaktär == 1 && (vapen == 2)){
+                System.out.println("Light Spearman");
+                Thread.sleep(1000);
+                System.out.println("Liv: 400 hp");
+                Thread.sleep(1000);
+                System.out.println("Attack: 9/10");
+                Thread.sleep(1000);
+                System.out.println("Träffchans: 6/10");
+                player_dmg=9;
+                player_hp=400;
+            }
+            else if (karaktär == 2 && (vapen == 1)){
+                System.out.println("Medium Swordsman");
+                Thread.sleep(1000);
+                System.out.println("Liv: 600 hp");
+                Thread.sleep(1000);
+                System.out.println("Attack: 8/10");
+                Thread.sleep(1000);
+                System.out.println("Träffchans: 6/10");
+                player_dmg =8;
+                player_hp=600;
+            }
+            else if (karaktär == 2 && (vapen == 2)){
+                System.out.println("Medium Spearman");
+                Thread.sleep(1000);
+                System.out.println("Liv: 600 hp");
+                Thread.sleep(1000);
+                System.out.println("Attack: 10/10");
+                Thread.sleep(1000);
+                System.out.println("Träffchans: 4/10");
+                player_dmg =10;
+                player_hp=600;
+            }
+            else if (karaktär == 3 && (vapen == 1)){
+                System.out.println("Heavy Swordsman");
+                Thread.sleep(1000);
+                System.out.println("Liv: 800 hp");
+                Thread.sleep(1000);
+                System.out.println("Attack: 5/10");
+                Thread.sleep(1000);
+                System.out.println("Träffchans: 6/10");
+                player_dmg =5;
+                player_hp=800;
+            }
+            else{
+                System.out.println("Heavy Spearman");
+                Thread.sleep(1000);
+                System.out.println("Liv: 800 hp");
+                Thread.sleep(1000);
+                System.out.println("Attack: 7/10");
+                Thread.sleep(1000);
+                System.out.println("Träffchans: 4/10");
+                player_dmg =7;
+                player_hp=800;
+            }
+            Thread.sleep(3000);
+            System.out.println("Nu är det dags att presentera din motståndare!");
+            Thread.sleep(1000);
+            System.out.println("MINION");
+            Thread.sleep(1000);
+            System.out.println("Liv: 600 hp");
+            Thread.sleep(1000);
+            System.out.println("Attack: 6/10");
+            Thread.sleep(1000);
+            System.out.println("Träffchans: 5/10");
+            int minion_hp=600;
+            int minion_dmg=6;
         }
             
     }
