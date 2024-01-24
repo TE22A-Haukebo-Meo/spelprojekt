@@ -32,8 +32,6 @@ public class App {
                     System.out.println("Liv = 600 hp");
                     Thread.sleep(1000);
                     System.out.println("Attack = 7/10");
-                    int medium_hp = 600;
-                    int meduim_dmg = 7;
                     break;
 
                 case 3:
@@ -42,8 +40,6 @@ public class App {
                     System.out.println("Liv = 800 hp");
                     Thread.sleep(1000);
                     System.out.println("Attack = 4/10");
-                    int heavy_hp = 800;
-                    int heavy_dmg = 4;
                     break;
             
                 default:
@@ -162,6 +158,21 @@ public class App {
             System.out.println("Träffchans: 5/10");
             int minion_hp=600;
             int minion_dmg=6;
+            System.out.println("ARE YA READY KIDS!!!");
+            Thread.sleep(1000);
+            System.out.println("3");
+            Thread.sleep(100);
+            System.out.println("2");
+            Thread.sleep(100);
+            System.out.println("1");
+            Thread.sleep(100);
+            System.out.println("--------------------");
+            System.out.println("------FIGHTING------");
+            System.out.println("--------------------");
+
+
+            System.out.println("Vill du fortsätta spela? Ja/Nej");
+            spela = tb.nextLine();
         }
             
     }
