@@ -324,7 +324,7 @@ public class App {
         Random spelare_rand = new Random();
         int rand_hit = spelare_rand.nextInt(10);
         int attack = 8;
-        if (rand_hit >= 1 && (rand_hit <=7)) {
+        if (rand_hit >= 1 && (rand_hit <=6)) {
             int dmg = attack*5;
             System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
             return dmg;
@@ -335,13 +335,56 @@ public class App {
         }
     }
     static int heavy_medium_sword(){
-
+        Random spelare_rand = new Random();
+        int rand_hit = spelare_rand.nextInt(10);
+        int attack = 7;
+        if (rand_hit >= 1 && (rand_hit <=5)) {
+            int dmg = attack*5;
+            System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else if (rand_hit == 6) {
+            int dmg = attack *8;
+            System.out.println("Du gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
+        }
+        else{
+            System.out.println("DU missade. Attacken gjorde 0 skada.");
+            return 0;
+        }
     }
     static int quick_medium_spear(){
-
+        Random spelare_rand = new Random();
+        int rand_hit = spelare_rand.nextInt(10);
+        int attack = 10;
+        if (rand_hit >= 1 && (rand_hit <=4)) {
+            int dmg = attack*5;
+            System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        }
+        else{
+            System.out.println("DU missade. Attacken gjorde 0 skada.");
+            return 0;
+        }
     }
     static int heavy_medium_spear(){
-
+        Random spelare_rand = new Random();
+        int rand_hit = spelare_rand.nextInt(10);
+        int attack = 10;
+        if (rand_hit >= 1 && (rand_hit <=3)) {
+            int dmg = attack*5;
+            System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else if (rand_hit == 4) {
+            int dmg = attack*8;
+            System.out.println("Du gjorde en criticla hit! Attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else{
+            System.out.println("DU missade. Attacken gjorde 0 skada.");
+            return 0;
+        }
     }
     static int quick_heavy_sword(){
 
