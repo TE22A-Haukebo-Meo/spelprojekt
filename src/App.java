@@ -185,6 +185,7 @@ public class App {
                 System.out.println("Quick Attack");
                 System.out.println("Heavy attack");
                 String attack = tb.nextLine();
+                attack = tb.nextLine();
                 if (karaktär == 1 && (svärd ==true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         minion_hp = minion_hp-quick_light_sword();
