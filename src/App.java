@@ -60,32 +60,35 @@ public class App {
             int vapen = tb.nextInt();
             boolean svärd = false;
             boolean spjut = false;
-            switch (vapen) {
-                case 1:
-                    System.out.println("Du valde Svärdet");
-                    Thread.sleep(1000);
-                    System.out.println("Attack: +1");
-                    Thread.sleep(1000);
-                    System.out.println("Träffchans: +1");
-                    svärd = true;
-                    break;
-
-                case 2:
-                    System.out.println("Du valde Spjutet");
-                    Thread.sleep(1000);
-                    System.out.println("Attack: +3");
-                    Thread.sleep(1000);
-                    System.out.println("Träffchans: -1");
-                    spjut = true;
-                    break;
             
-                default:
-                    System.out.println("Välj vapen 1 eller 2");
-                    
-            }
+                switch (vapen) {
+                    case 1:
+                        System.out.println("Du valde Svärdet");
+                        Thread.sleep(1000);
+                        System.out.println("Attack: +1");
+                        Thread.sleep(1000);
+                        System.out.println("Träffchans: +1");
+                        svärd = true;
+                        spjut = false;
+                        break;
+
+                    case 2:
+                        System.out.println("Du valde Spjutet");
+                        Thread.sleep(1000);
+                        System.out.println("Attack: +3");
+                        Thread.sleep(1000);
+                        System.out.println("Träffchans: -1");
+                        spjut = true;
+                        svärd = false;
+                        break;
+                
+                    default:
+                        System.out.println("Välj vapen 1 eller 2");
+                        
+                }
             System.out.println("Bra jobbat! Du har nu byggt din karaktär! Såhär blev den:");
             Thread.sleep(1500);
-            if (karaktär == 1 && (svärd =true)) {
+            if (karaktär == 1 && (svärd ==true)) {
                 System.out.println("Light Swordsman");
                 Thread.sleep(1000);
                 System.out.println("Liv = 400 hp");
@@ -96,7 +99,7 @@ public class App {
                 player_dmg = 400;
                 player_hp = 400;
             }
-            else if (karaktär == 1 && (spjut=true)){
+            else if (karaktär == 1 && (spjut == true)){
                 System.out.println("Light Spearman");
                 Thread.sleep(1000);
                 System.out.println("Liv: 400 hp");
@@ -107,7 +110,7 @@ public class App {
                 player_dmg=9;
                 player_hp=400;
             }
-            else if (karaktär == 2 && (svärd=true)){
+            else if (karaktär == 2 && (svärd==true)){
                 System.out.println("Medium Swordsman");
                 Thread.sleep(1000);
                 System.out.println("Liv: 600 hp");
@@ -118,7 +121,7 @@ public class App {
                 player_dmg =8;
                 player_hp=600;
             }
-            else if (karaktär == 2 && (spjut=true)){
+            else if (karaktär == 2 && (spjut==true)){
                 System.out.println("Medium Spearman");
                 Thread.sleep(1000);
                 System.out.println("Liv: 600 hp");
@@ -129,7 +132,7 @@ public class App {
                 player_dmg =10;
                 player_hp=600;
             }
-            else if (karaktär == 3 && (svärd=true)){
+            else if (karaktär == 3 && (svärd==true)){
                 System.out.println("Heavy Swordsman");
                 Thread.sleep(1000);
                 System.out.println("Liv: 800 hp");
@@ -140,7 +143,7 @@ public class App {
                 player_dmg =5;
                 player_hp=800;
             }
-            else if (karaktär == 3 && (spjut=true)) {
+            else if (karaktär == 3 && (spjut==true)) {
                 System.out.println("Heavy Spearman");
                 Thread.sleep(1000);
                 System.out.println("Liv: 800 hp");
@@ -182,7 +185,7 @@ public class App {
                 System.out.println("Quick Attack");
                 System.out.println("Heavy attack");
                 String attack = tb.nextLine();
-                if (karaktär == 1 && (svärd =true)) {
+                if (karaktär == 1 && (svärd ==true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         minion_hp = minion_hp-quick_light_sword();
                         Thread.sleep(1000);
@@ -195,7 +198,7 @@ public class App {
                         System.out.println("Skriv quick eller heavy.");
                     }
                 }
-                else if (karaktär == 1 && (spjut=true)){
+                else if (karaktär == 1 && (spjut==true)){
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         minion_hp = minion_hp-quick_light_spear();
                         Thread.sleep(1000);
@@ -208,7 +211,7 @@ public class App {
                         System.out.println("Skriv quick eller heavy.");
                     }
                 }
-                else if (karaktär == 2 && (svärd=true)){
+                else if (karaktär == 2 && (svärd==true)){
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         minion_hp = minion_hp-quick_medium_sword();
                         Thread.sleep(1000);
@@ -221,7 +224,7 @@ public class App {
                         System.out.println("Skriv quick eller heavy.");
                     }
                 }
-                else if (karaktär == 2 && (spjut=true)) {
+                else if (karaktär == 2 && (spjut==true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         minion_hp = minion_hp-quick_medium_spear();
                         Thread.sleep(1000);
@@ -234,7 +237,7 @@ public class App {
                         System.out.println("Skriv quick eller heavy.");
                     }
                 }
-                else if (karaktär == 3 && (svärd=true)) {
+                else if (karaktär == 3 && (svärd==true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         minion_hp = minion_hp-quick_heavy_sword();
                         Thread.sleep(1000);
@@ -247,7 +250,7 @@ public class App {
                         System.out.println("Skriv quick eller heavy.");
                     }
                 }
-                else{
+                else if (karaktär == 3 && (spjut==true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         minion_hp = minion_hp-quick_heavy_spear();
                         Thread.sleep(1000);
