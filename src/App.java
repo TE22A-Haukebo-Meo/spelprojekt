@@ -184,12 +184,10 @@ public class App {
                 String attack = tb.nextLine();
                 if (karaktär == 1 && (svärd =true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        quick_light_sword();
                         minion_hp = minion_hp-quick_light_sword();
                         Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        heavy_light_sword();
                         minion_hp = minion_hp-heavy_light_sword();
                         Thread.sleep(1000);
                     }
@@ -199,12 +197,10 @@ public class App {
                 }
                 else if (karaktär == 1 && (spjut=true)){
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        quick_light_spear();
                         minion_hp = minion_hp-quick_light_spear();
                         Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        heavy_light_spear();
                         minion_hp = minion_hp-heavy_light_spear();
                         Thread.sleep(1000);
                     }
@@ -214,12 +210,10 @@ public class App {
                 }
                 else if (karaktär == 2 && (svärd=true)){
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        quick_medium_sword();
                         minion_hp = minion_hp-quick_medium_sword();
                         Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        heavy_medium_sword();
                         minion_hp = minion_hp-heavy_medium_sword();
                         Thread.sleep(1000);
                     }
@@ -229,12 +223,10 @@ public class App {
                 }
                 else if (karaktär == 2 && (spjut=true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        quick_medium_spear();
                         minion_hp = minion_hp-quick_medium_spear();
                         Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        heavy_medium_spear();
                         minion_hp = minion_hp-heavy_medium_spear();
                         Thread.sleep(1000);
                     }
@@ -244,12 +236,10 @@ public class App {
                 }
                 else if (karaktär == 3 && (svärd=true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        quick_heavy_sword();
                         minion_hp = minion_hp-quick_heavy_sword();
                         Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        heavy_haevy_sword();
                         minion_hp = minion_hp-heavy_haevy_sword();
                         Thread.sleep(1000);
                     }
@@ -259,12 +249,10 @@ public class App {
                 }
                 else{
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        quick_heavy_spear();
                         minion_hp = minion_hp-quick_heavy_spear();
                         Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        heavy_heavy_spear();
                         minion_hp = minion_hp-heavy_heavy_spear();
                         Thread.sleep(1000);
                     }
@@ -272,7 +260,6 @@ public class App {
                         System.out.println("Skriv quick eller heavy.");
                     }
                 }
-                minion_attack();
                 player_hp=player_hp-minion_attack();
                 System.out.println("Minions hp är nu "+minion_hp);
                 Thread.sleep(1000);
