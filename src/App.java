@@ -140,7 +140,7 @@ public class App {
                 player_dmg =5;
                 player_hp=800;
             }
-            else{
+            else if (karaktär == 3 && (spjut=true)) {
                 System.out.println("Heavy Spearman");
                 Thread.sleep(1000);
                 System.out.println("Liv: 800 hp");
@@ -176,6 +176,7 @@ public class App {
             System.out.println("--------------------");
 
             System.out.println("Du har första draget. Vilken attack vill du välja?");
+            Thread.sleep(1000);
 
             while (player_hp >0 && minion_hp >0) {
                 System.out.println("Quick Attack");
@@ -184,9 +185,13 @@ public class App {
                 if (karaktär == 1 && (svärd =true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         quick_light_sword();
+                        minion_hp = minion_hp-quick_light_sword();
+                        Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                         heavy_light_sword();
+                        minion_hp = minion_hp-heavy_light_sword();
+                        Thread.sleep(1000);
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
@@ -195,9 +200,13 @@ public class App {
                 else if (karaktär == 1 && (spjut=true)){
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         quick_light_spear();
+                        minion_hp = minion_hp-quick_light_spear();
+                        Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                         heavy_light_spear();
+                        minion_hp = minion_hp-heavy_light_spear();
+                        Thread.sleep(1000);
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
@@ -206,9 +215,13 @@ public class App {
                 else if (karaktär == 2 && (svärd=true)){
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         quick_medium_sword();
+                        minion_hp = minion_hp-quick_medium_sword();
+                        Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                         heavy_medium_sword();
+                        minion_hp = minion_hp-heavy_medium_sword();
+                        Thread.sleep(1000);
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
@@ -217,9 +230,13 @@ public class App {
                 else if (karaktär == 2 && (spjut=true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         quick_medium_spear();
+                        minion_hp = minion_hp-quick_medium_spear();
+                        Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                         heavy_medium_spear();
+                        minion_hp = minion_hp-heavy_medium_spear();
+                        Thread.sleep(1000);
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
@@ -228,9 +245,13 @@ public class App {
                 else if (karaktär == 3 && (svärd=true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         quick_heavy_sword();
+                        minion_hp = minion_hp-quick_heavy_sword();
+                        Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                         heavy_haevy_sword();
+                        minion_hp = minion_hp-heavy_haevy_sword();
+                        Thread.sleep(1000);
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
@@ -239,14 +260,27 @@ public class App {
                 else{
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         quick_heavy_spear();
+                        minion_hp = minion_hp-quick_heavy_spear();
+                        Thread.sleep(1000);
                     }
                     else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                         heavy_heavy_spear();
+                        minion_hp = minion_hp-heavy_heavy_spear();
+                        Thread.sleep(1000);
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
                     }
                 }
+                minion_attack();
+                player_hp=player_hp-minion_attack();
+                System.out.println("Minions hp är nu "+minion_hp);
+                Thread.sleep(1000);
+                System.out.println("Ditt hp är nu "+player_hp);
+                Thread.sleep(1000);
+                System.out.println("Din tur.");
+                Thread.sleep(1000);
+
             }
 
             System.out.println("Vill du fortsätta spela? Ja/Nej");
@@ -314,6 +348,7 @@ public class App {
         else if (rand_hit == 5) {
             int dmg = attack*8;
             System.out.println("Du gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
+            return dmg;
         }
         else{
             System.out.println("DU missade. Attacken gjorde 0 skada.");
@@ -346,6 +381,7 @@ public class App {
         else if (rand_hit == 6) {
             int dmg = attack *8;
             System.out.println("Du gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
+            return dmg;
         }
         else{
             System.out.println("DU missade. Attacken gjorde 0 skada.");
@@ -360,7 +396,6 @@ public class App {
             int dmg = attack*5;
             System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
             return dmg;
-        }
         }
         else{
             System.out.println("DU missade. Attacken gjorde 0 skada.");
@@ -387,15 +422,88 @@ public class App {
         }
     }
     static int quick_heavy_sword(){
-
+        Random spelare_rand = new Random();
+        int rand_hit = spelare_rand.nextInt(10);
+        int attack = 5;
+        if (rand_hit >= 1 && (rand_hit <=6)) {
+            int dmg = attack*5;
+            System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else{
+            System.out.println("DU missade. Attacken gjorde 0 skada.");
+            return 0;
+        }
     }
     static int heavy_haevy_sword(){
-
+        Random spelare_rand = new Random();
+        int rand_hit = spelare_rand.nextInt(10);
+        int attack = 10;
+        if (rand_hit >= 1 && (rand_hit <=5)) {
+            int dmg = attack*5;
+            System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else if (rand_hit == 6) {
+            int dmg = attack*8;
+            System.out.println("Du gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else{
+            System.out.println("DU missade. Attacken gjorde 0 skada.");
+            return 0;
+        }
     }
     static int quick_heavy_spear(){
-
+        Random spelare_rand = new Random();
+        int rand_hit = spelare_rand.nextInt(10);
+        int attack = 7;
+        if (rand_hit >= 1 && (rand_hit <=4)) {
+            int dmg = attack*5;
+            System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else{
+            System.out.println("DU missade. Attacken gjorde 0 skada.");
+            return 0;
+        }
     }
     static int heavy_heavy_spear(){
-
+        Random spelare_rand = new Random();
+        int rand_hit = spelare_rand.nextInt(10);
+        int attack = 10;
+        if (rand_hit >= 1 && (rand_hit <=4)) {
+            int dmg = attack*5;
+            System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else if (rand_hit == 5) {
+            int dmg = attack*8;
+            System.out.println("Du gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else{
+            System.out.println("DU missade. Attacken gjorde 0 skada.");
+            return 0;
+        }
+    }
+    static int minion_attack() {
+        Random minion_rand = new Random();
+        int rand_hit = minion_rand.nextInt(10);
+        int attack = 6;
+        if (rand_hit >= 1 && (rand_hit <=5)) {
+            int dmg = attack*5;
+            System.out.println("MINION träffade! Attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else if (rand_hit == 6) {
+            int dmg = attack*8;
+            System.out.println("MINION gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
+            return dmg;
+        }
+        else{
+            System.out.println("Minion missade. Attacken gjorde 0 skada.");
+            return 0;
+        }
     }
 }
