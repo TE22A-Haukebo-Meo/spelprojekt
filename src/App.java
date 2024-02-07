@@ -267,11 +267,14 @@ public class App {
                 Thread.sleep(1000);
                 System.out.println("Din tur.");
                 Thread.sleep(1000);
-
             }
-
+            if (minion_hp == 0) {
+                System.out.println("Du vann! Bra jobbat!");
+            }
+            else if (player_hp == 0) {
+                System.out.println("Du förlorade... ");
+            }
             System.out.println("Vill du fortsätta spela? Ja/Nej");
-            spela = tb.nextLine();
             spela = tb.nextLine();
         }
     }
