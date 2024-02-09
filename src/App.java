@@ -180,12 +180,12 @@ public class App {
 
             System.out.println("Du har första draget. Vilken attack vill du välja?");
             Thread.sleep(1000);
+            tb.nextLine();
 
             while (player_hp >0 && minion_hp >0) {
                 System.out.println("Quick Attack");
                 System.out.println("Heavy attack");
                 String attack = tb.nextLine();
-                attack = tb.nextLine();
                 if (karaktär == 1 && (svärd ==true)) {
                     if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                         minion_hp = minion_hp-quick_light_sword();
@@ -269,13 +269,15 @@ public class App {
                 Thread.sleep(1000);
                 System.out.println("Ditt hp är nu "+player_hp);
                 Thread.sleep(1000);
-                System.out.println("Din tur.");
-                Thread.sleep(1000);
+                if (minion_hp > 0 && (player_hp > 0)) {
+                    System.out.println("Din tur.");
+                    Thread.sleep(1000);
+                }
             }
-            if (minion_hp == 0) {
+            if (minion_hp <= 0) {
                 System.out.println("Du vann! Bra jobbat!");
             }
-            else if (player_hp == 0) {
+            else if (player_hp <= 0) {
                 System.out.println("Du förlorade... ");
             }
             System.out.println("Vill du fortsätta spela? Ja/Nej");
