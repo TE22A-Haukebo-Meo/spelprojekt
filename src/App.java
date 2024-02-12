@@ -178,6 +178,7 @@ public class App {
             System.out.println("Träffchans: 5/10");
             int minion_hp=600;
             int minion_dmg=6;
+            Thread.sleep(2000);
             System.out.println("ARE YA READY KIDS!!!");
             Thread.sleep(1000);
             System.out.println("3");
@@ -190,6 +191,7 @@ public class App {
             System.out.println("------FIGHTING------");
             System.out.println("--------------------");
 
+            Thread.sleep(1000);
             System.out.println("Du har första draget. Vilken attack vill du välja?");
             Thread.sleep(1000);
             tb.nextLine();
@@ -199,87 +201,117 @@ public class App {
                 System.out.println("Heavy attack");
                 String attack = tb.nextLine();
                 if (karaktär == 1 && (svärd ==true)) {
-                    if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        minion_hp = minion_hp-quick_light_sword();
-                        Thread.sleep(1000);
-                    }
-                    else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        minion_hp = minion_hp-heavy_light_sword();
-                        Thread.sleep(1000);
-                    }
-                    else{
-                        System.out.println("Skriv quick eller heavy.");
-                        attack = tb.nextLine();
+                    boolean loop3 = true;
+                    while (loop3) {
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            minion_hp = minion_hp-quick_light_sword();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            minion_hp = minion_hp-heavy_light_sword();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else{
+                            System.out.println("Skriv quick eller heavy.");
+                            attack = tb.nextLine();
+                        }
                     }
                 }
                 else if (karaktär == 1 && (spjut==true)){
-                    if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        minion_hp = minion_hp-quick_light_spear();
-                        Thread.sleep(1000);
-                    }
-                    else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        minion_hp = minion_hp-heavy_light_spear();
-                        Thread.sleep(1000);
-                    }
-                    else{
-                        System.out.println("Skriv quick eller heavy.");
-                        attack = tb.nextLine();
+                    boolean loop3 = true;
+                    while (loop3) {
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            minion_hp = minion_hp-quick_light_spear();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            minion_hp = minion_hp-heavy_light_spear();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else{
+                            System.out.println("Skriv quick eller heavy.");
+                            attack = tb.nextLine();
+                        }
                     }
                 }
                 else if (karaktär == 2 && (svärd==true)){
-                    if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        minion_hp = minion_hp-quick_medium_sword();
-                        Thread.sleep(1000);
-                    }
-                    else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        minion_hp = minion_hp-heavy_medium_sword();
-                        Thread.sleep(1000);
-                    }
-                    else{
-                        System.out.println("Skriv quick eller heavy.");
-                        attack = tb.nextLine();
+                    boolean loop3 = true;
+                    while (loop3) {
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            minion_hp = minion_hp-quick_medium_sword();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            minion_hp = minion_hp-heavy_medium_sword();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else{
+                            System.out.println("Skriv quick eller heavy.");
+                            attack = tb.nextLine();
+                        }
                     }
                 }
                 else if (karaktär == 2 && (spjut==true)) {
-                    if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        minion_hp = minion_hp-quick_medium_spear();
-                        Thread.sleep(1000);
-                    }
-                    else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        minion_hp = minion_hp-heavy_medium_spear();
-                        Thread.sleep(1000);
-                    }
-                    else{
-                        System.out.println("Skriv quick eller heavy.");
-                        attack = tb.nextLine();
+                    boolean loop3 = true;
+                    while (loop3) {
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            minion_hp = minion_hp-quick_medium_spear();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            minion_hp = minion_hp-heavy_medium_spear();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else{
+                            System.out.println("Skriv quick eller heavy.");
+                            attack = tb.nextLine();
+                        }
                     }
                 }
                 else if (karaktär == 3 && (svärd==true)) {
-                    if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        minion_hp = minion_hp-quick_heavy_sword();
-                        Thread.sleep(1000);
-                    }
-                    else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        minion_hp = minion_hp-heavy_haevy_sword();
-                        Thread.sleep(1000);
-                    }
-                    else{
-                        System.out.println("Skriv quick eller heavy.");
-                        attack = tb.nextLine();
+                    boolean loop3 = true;
+                    while (loop3) {
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            minion_hp = minion_hp-quick_heavy_sword();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            minion_hp = minion_hp-heavy_haevy_sword();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else{
+                            System.out.println("Skriv quick eller heavy.");
+                            attack = tb.nextLine();
+                        }
                     }
                 }
                 else if (karaktär == 3 && (spjut==true)) {
-                    if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                        minion_hp = minion_hp-quick_heavy_spear();
-                        Thread.sleep(1000);
-                    }
-                    else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                        minion_hp = minion_hp-heavy_heavy_spear();
-                        Thread.sleep(1000);
-                    }
-                    else{
-                        System.out.println("Skriv quick eller heavy.");
-                        attack = tb.nextLine();
+                    boolean loop3 = true;
+                    while (loop3) {
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            minion_hp = minion_hp-quick_heavy_spear();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            minion_hp = minion_hp-heavy_heavy_spear();
+                            Thread.sleep(1000);
+                            loop3 = false;
+                        }
+                        else{
+                            System.out.println("Skriv quick eller heavy.");
+                            attack = tb.nextLine();
+                        }
                     }
                 }
                 if (minion_hp > 0 && (player_hp > 0)) {
@@ -297,7 +329,7 @@ public class App {
                     System.out.println("Ditt hp är nu "+player_hp);
                     Thread.sleep(1000);
                 }
-                else{
+                else if (player_hp <=0) {
                     System.out.println("Minions hp är nu "+minion_hp);
                     Thread.sleep(1000);
                     System.out.println("Ditt hp är nu 0");
