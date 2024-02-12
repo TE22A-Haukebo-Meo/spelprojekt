@@ -322,7 +322,7 @@ public class App {
         Random spelare_rand = new Random();
         int rand_hit = spelare_rand.nextInt(10);
         int attack = 9;
-        if (rand_hit >= 1 && (rand_hit <=5)) {
+        if (rand_hit >= 1 && (rand_hit <=6)) {
             int dmg = attack*5;
             System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
             return dmg;
@@ -336,13 +336,13 @@ public class App {
         Random spelare_rand = new Random();
         int rand_hit = spelare_rand.nextInt(10);
         int attack = 9;
-        if (rand_hit >= 1 && (rand_hit <=4)) {
-            int dmg = attack*5;
+        if (rand_hit >= 1 && (rand_hit <=5)) {
+            int dmg = attack*7;
             System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
             return dmg;
         }
-        else if (rand_hit == 5) {
-            int dmg = attack*8;
+        else if (rand_hit == 6) {
+            int dmg = attack*9;
             System.out.println("Du gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
             return dmg;
         }
@@ -370,12 +370,12 @@ public class App {
         int rand_hit = spelare_rand.nextInt(10);
         int attack = 7;
         if (rand_hit >= 1 && (rand_hit <=5)) {
-            int dmg = attack*5;
+            int dmg = attack*7;
             System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
             return dmg;
         }
         else if (rand_hit == 6) {
-            int dmg = attack *8;
+            int dmg = attack *9;
             System.out.println("Du gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
             return dmg;
         }
@@ -388,7 +388,7 @@ public class App {
         Random spelare_rand = new Random();
         int rand_hit = spelare_rand.nextInt(10);
         int attack = 10;
-        if (rand_hit >= 1 && (rand_hit <=4)) {
+        if (rand_hit >= 1 && (rand_hit <=5)) {
             int dmg = attack*5;
             System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
             return dmg;
@@ -402,13 +402,13 @@ public class App {
         Random spelare_rand = new Random();
         int rand_hit = spelare_rand.nextInt(10);
         int attack = 10;
-        if (rand_hit >= 1 && (rand_hit <=3)) {
-            int dmg = attack*5;
+        if (rand_hit >= 1 && (rand_hit <=4)) {
+            int dmg = attack*7;
             System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
             return dmg;
         }
-        else if (rand_hit == 4) {
-            int dmg = attack*8;
+        else if (rand_hit == 5) {
+            int dmg = attack*9;
             System.out.println("Du gjorde en criticla hit! Attacken gjorde "+dmg+" skada!");
             return dmg;
         }
@@ -436,12 +436,12 @@ public class App {
         int rand_hit = spelare_rand.nextInt(10);
         int attack = 10;
         if (rand_hit >= 1 && (rand_hit <=5)) {
-            int dmg = attack*5;
+            int dmg = attack*7;
             System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
             return dmg;
         }
         else if (rand_hit == 6) {
-            int dmg = attack*8;
+            int dmg = attack*9;
             System.out.println("Du gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
             return dmg;
         }
@@ -454,7 +454,7 @@ public class App {
         Random spelare_rand = new Random();
         int rand_hit = spelare_rand.nextInt(10);
         int attack = 7;
-        if (rand_hit >= 1 && (rand_hit <=4)) {
+        if (rand_hit >= 1 && (rand_hit <=5)) {
             int dmg = attack*5;
             System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
             return dmg;
@@ -468,13 +468,13 @@ public class App {
         Random spelare_rand = new Random();
         int rand_hit = spelare_rand.nextInt(10);
         int attack = 10;
-        if (rand_hit >= 1 && (rand_hit <=4)) {
-            int dmg = attack*5;
+        if (rand_hit >= 1 && (rand_hit <=5)) {
+            int dmg = attack*7;
             System.out.println("Du träffade! attacken gjorde "+dmg+" skada!");
             return dmg;
         }
-        else if (rand_hit == 5) {
-            int dmg = attack*8;
+        else if (rand_hit == 6) {
+            int dmg = attack*9;
             System.out.println("Du gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
             return dmg;
         }
@@ -488,12 +488,12 @@ public class App {
         int rand_hit = minion_rand.nextInt(10);
         int attack = 6;
         if (rand_hit >= 1 && (rand_hit <=5)) {
-            int dmg = attack*5;
+            int dmg = attack*6;
             System.out.println("MINION träffade! Attacken gjorde "+dmg+" skada!");
             return dmg;
         }
         else if (rand_hit == 6) {
-            int dmg = attack*8;
+            int dmg = attack*9;
             System.out.println("MINION gjorde en critical hit! Attacken gjorde "+dmg+" skada!");
             return dmg;
         }
