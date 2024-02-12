@@ -14,37 +14,43 @@ public class App {
             System.out.println("3. Heavy");
             System.out.println("Ditt val: (siffra)");
             int karaktär = tb.nextInt();
-            Random rand = new Random();
-            switch (karaktär) {
-                case 1:
-                    System.out.println("Du har valt karaktären light");
-                    Thread.sleep(1000);
-                    System.out.println("Liv = 400 hp");
-                    Thread.sleep(1000);
-                    System.out.println("Attack = 6/10");
-                    Thread.sleep(1000);
-                    System.out.println("+Perk: Större träffchans!");
-                    break;
-                
-                case 2:
-                    System.out.println("Du har valt karaktären medium");
-                    Thread.sleep(1000);
-                    System.out.println("Liv = 600 hp");
-                    Thread.sleep(1000);
-                    System.out.println("Attack = 7/10");
-                    break;
+            boolean loop1 = true;
+            while (loop1) {          
+                switch (karaktär) {
+                    case 1:
+                        System.out.println("Du har valt karaktären light");
+                        Thread.sleep(1000);
+                        System.out.println("Liv = 400 hp");
+                        Thread.sleep(1000);
+                        System.out.println("Attack = 6/10");
+                        Thread.sleep(1000);
+                        System.out.println("+Perk: Större träffchans!");
+                        loop1 = false;
+                        break;
+                    
+                    case 2:
+                        System.out.println("Du har valt karaktären medium");
+                        Thread.sleep(1000);
+                        System.out.println("Liv = 600 hp");
+                        Thread.sleep(1000);
+                        System.out.println("Attack = 7/10");
+                        loop1 = false;
+                        break;
 
-                case 3:
-                    System.out.println("Du har valt karaktären heavy");
-                    Thread.sleep(1000);
-                    System.out.println("Liv = 800 hp");
-                    Thread.sleep(1000);
-                    System.out.println("Attack = 4/10");
-                    break;
-            
-                default:
-                    System.out.println("Välj karaktär 1, 2 eller 3");
-                    break;
+                    case 3:
+                        System.out.println("Du har valt karaktären heavy");
+                        Thread.sleep(1000);
+                        System.out.println("Liv = 800 hp");
+                        Thread.sleep(1000);
+                        System.out.println("Attack = 4/10");
+                        loop1 = false;
+                        break;
+                
+                    default:
+                        System.out.println("Välj karaktär 1, 2 eller 3");
+                        karaktär = tb.nextInt();
+                        break;
+                }
             }
             int player_dmg = 5;
             //dmg står för damage, skada
@@ -60,7 +66,8 @@ public class App {
             int vapen = tb.nextInt();
             boolean svärd = false;
             boolean spjut = false;
-            
+            boolean loop2 = true;
+            while (loop2) {
                 switch (vapen) {
                     case 1:
                         System.out.println("Du valde Svärdet");
@@ -70,6 +77,7 @@ public class App {
                         System.out.println("Träffchans: +1");
                         svärd = true;
                         spjut = false;
+                        loop2 = false;
                         break;
 
                     case 2:
@@ -80,12 +88,16 @@ public class App {
                         System.out.println("Träffchans: -1");
                         spjut = true;
                         svärd = false;
+                        loop2 = false;
                         break;
                 
                     default:
                         System.out.println("Välj vapen 1 eller 2");
-                        
-                }
+                        vapen = tb.nextInt();
+                        break;
+        
+                }   
+            }
             System.out.println("Bra jobbat! Du har nu byggt din karaktär! Såhär blev den:");
             Thread.sleep(1500);
             if (karaktär == 1 && (svärd ==true)) {
@@ -197,6 +209,7 @@ public class App {
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
+                        attack = tb.nextLine();
                     }
                 }
                 else if (karaktär == 1 && (spjut==true)){
@@ -210,6 +223,7 @@ public class App {
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
+                        attack = tb.nextLine();
                     }
                 }
                 else if (karaktär == 2 && (svärd==true)){
@@ -223,6 +237,7 @@ public class App {
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
+                        attack = tb.nextLine();
                     }
                 }
                 else if (karaktär == 2 && (spjut==true)) {
@@ -236,6 +251,7 @@ public class App {
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
+                        attack = tb.nextLine();
                     }
                 }
                 else if (karaktär == 3 && (svärd==true)) {
@@ -249,6 +265,7 @@ public class App {
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
+                        attack = tb.nextLine();
                     }
                 }
                 else if (karaktär == 3 && (spjut==true)) {
@@ -262,15 +279,28 @@ public class App {
                     }
                     else{
                         System.out.println("Skriv quick eller heavy.");
+                        attack = tb.nextLine();
                     }
                 }
-                player_hp=player_hp-minion_attack();
-                System.out.println("Minions hp är nu "+minion_hp);
-                Thread.sleep(1000);
-                System.out.println("Ditt hp är nu "+player_hp);
-                Thread.sleep(1000);
                 if (minion_hp > 0 && (player_hp > 0)) {
+                    player_hp=player_hp-minion_attack();
+                    System.out.println("Minions hp är nu "+minion_hp);
+                    Thread.sleep(1000);
+                    System.out.println("Ditt hp är nu "+player_hp);
+                    Thread.sleep(1000);
                     System.out.println("Din tur.");
+                    Thread.sleep(1000);
+                }
+                else if (minion_hp <=0) {
+                    System.out.println("Minions hp är nu 0");
+                    Thread.sleep(1000);
+                    System.out.println("Ditt hp är nu "+player_hp);
+                    Thread.sleep(1000);
+                }
+                else{
+                    System.out.println("Minions hp är nu "+minion_hp);
+                    Thread.sleep(1000);
+                    System.out.println("Ditt hp är nu 0");
                     Thread.sleep(1000);
                 }
             }
