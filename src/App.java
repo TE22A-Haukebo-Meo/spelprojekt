@@ -200,6 +200,7 @@ public class App {
                 System.out.println("Quick Attack");
                 System.out.println("Heavy attack");
                 String attack = tb.nextLine();
+                int 
                 if (karaktär == 1 && (svärd ==true)) {
                     boolean loop3 = true;
                     while (loop3) {
@@ -217,6 +218,16 @@ public class App {
                             System.out.println("Skriv quick eller heavy.");
                             attack = tb.nextLine();
                         }
+                    }
+                    for (int i = 0; i < ; i++) {
+                        int turns [][] = new int[1][i];
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            turns [0][i] = quick_light_sword();
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            turns [0][i] = heavy_light_sword();
+                        }
+                        turns [1][i] = minion_attack();
                     }
                 }
                 else if (karaktär == 1 && (spjut==true)){
@@ -237,6 +248,16 @@ public class App {
                             attack = tb.nextLine();
                         }
                     }
+                    for (int i = 0; i < ; i++) {
+                        int turns [][] = new int[1][i];
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            turns [0][i] = quick_light_spear();
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            turns [0][i] = heavy_light_spear();
+                        }
+                        turns [1][i] = minion_attack();
+                    }
                 }
                 else if (karaktär == 2 && (svärd==true)){
                     boolean loop3 = true;
@@ -255,6 +276,16 @@ public class App {
                             System.out.println("Skriv quick eller heavy.");
                             attack = tb.nextLine();
                         }
+                    }
+                    for (int i = 0; i < ; i++) {
+                        int turns [][] = new int[1][i];
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            turns [0][i] = quick_medium_sword();
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            turns [0][i] = heavy_medium_sword();
+                        }
+                        turns [1][i] = minion_attack();
                     }
                 }
                 else if (karaktär == 2 && (spjut==true)) {
@@ -275,6 +306,16 @@ public class App {
                             attack = tb.nextLine();
                         }
                     }
+                    for (int i = 0; i < ; i++) {
+                        int turns [][] = new int[1][i];
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            turns [0][i] = quick_medium_spear();
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            turns [0][i] = heavy_medium_spear();
+                        }
+                        turns [1][i] = minion_attack();
+                    }
                 }
                 else if (karaktär == 3 && (svärd==true)) {
                     boolean loop3 = true;
@@ -294,6 +335,16 @@ public class App {
                             attack = tb.nextLine();
                         }
                     }
+                    for (int i = 0; i < ; i++) {
+                        int turns [][] = new int[1][i];
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            turns [0][i] = quick_heavy_sword();
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            turns [0][i] = heavy_haevy_sword();
+                        }
+                        turns [1][i] = minion_attack();
+                    }
                 }
                 else if (karaktär == 3 && (spjut==true)) {
                     boolean loop3 = true;
@@ -312,6 +363,16 @@ public class App {
                             System.out.println("Skriv quick eller heavy.");
                             attack = tb.nextLine();
                         }
+                    }
+                    for (int i = 0; i < ; i++) {
+                        int turns [][] = new int[1][i];
+                        if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
+                            turns [0][i] = quick_heavy_spear();
+                        }
+                        else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
+                            turns [0][i] = heavy_heavy_spear();
+                        }
+                        turns [1][i] = minion_attack();
                     }
                 }
                 if (minion_hp > 0 && (player_hp > 0)) {
@@ -341,6 +402,12 @@ public class App {
             }
             else if (player_hp <= 0) {
                 System.out.println("Du förlorade... ");
+            }
+            System.out.println("Vill du se händelseförloppet?");
+            String sequence = tb.nextLine();
+            if (sequnce.equalsIgnoreCase("ja")) {
+                System.out.println(turns[0][turns.length]);
+                System.out.println(turns[1][turns.length]);
             }
             System.out.println("Vill du fortsätta spela? Ja/Nej");
             spela = tb.nextLine();
