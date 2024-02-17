@@ -195,7 +195,7 @@ public class App {
             System.out.println("Du har första draget. Vilken attack vill du välja?");
             Thread.sleep(1000);
             tb.nextLine();
-            int turns [][] = new int[1][100];
+            int turns [][] = new int[2][100];
             int player_turn = 0;
             int minion_turn = 0;
 
@@ -208,7 +208,7 @@ public class App {
                     while (loop3) {
                         if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                             int skada = quick_light_sword();
-                            minion_hp -= skada;
+                            minion_hp = minion_hp-skada;
                             turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
@@ -216,7 +216,7 @@ public class App {
                         }
                         else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                             int skada = heavy_light_sword();
-                            minion_hp -= skada;
+                            minion_hp = minion_hp-skada;
                             turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
@@ -234,7 +234,7 @@ public class App {
                     while (loop3) {
                         if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                             int skada = quick_light_spear();
-                            minion_hp -= skada;
+                            minion_hp = minion_hp-skada;
                             turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
@@ -242,7 +242,7 @@ public class App {
                         }
                         else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                             int skada = heavy_light_spear();
-                            minion_hp -= skada;
+                            minion_hp = minion_hp-skada;
                             turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
@@ -259,7 +259,7 @@ public class App {
                     while (loop3) {
                         if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                             int skada = quick_medium_sword();
-                            minion_hp -= skada;
+                            minion_hp = minion_hp-skada;
                             turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
@@ -267,7 +267,7 @@ public class App {
                         }
                         else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                             int skada = heavy_medium_sword();
-                            minion_hp -= skada;
+                            minion_hp = minion_hp-skada;
                             turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
@@ -284,7 +284,7 @@ public class App {
                     while (loop3) {
                         if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                             int skada = quick_medium_spear();
-                            minion_hp -= skada;
+                            minion_hp = minion_hp-skada;
                             turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
@@ -292,7 +292,7 @@ public class App {
                         }
                         else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                             int skada = heavy_medium_spear();
-                            minion_hp -= skada;
+                            minion_hp = minion_hp-skada;
                             turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
@@ -309,7 +309,7 @@ public class App {
                     while (loop3) {
                         if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
                             int skada = quick_heavy_sword();
-                            minion_hp -= skada;
+                            minion_hp = minion_hp-skada;
                             turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
@@ -317,7 +317,7 @@ public class App {
                         }
                         else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
                             int skada = heavy_haevy_sword();
-                            minion_hp -= skada;
+                            minion_hp = minion_hp-skada;
                             turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
@@ -333,15 +333,17 @@ public class App {
                     boolean loop3 = true;
                     while (loop3) {
                         if (attack.equalsIgnoreCase("Quick") || attack.equalsIgnoreCase("quick attack")) {
-                            minion_hp = minion_hp-quick_heavy_spear();
-                            turns[0][player_turn] = quick_heavy_spear();
+                            int skada = quick_heavy_spear();
+                            minion_hp = minion_hp-skada;
+                            turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
                             loop3 = false;
                         }
                         else if (attack.equalsIgnoreCase("Heavy") || attack.equalsIgnoreCase("heavy attack")) {
-                            minion_hp = minion_hp-heavy_heavy_spear();
-                            turns[0][player_turn] = heavy_heavy_spear();
+                            int skada = heavy_heavy_spear();
+                            minion_hp = minion_hp-skada;
+                            turns[0][player_turn] = skada;
                             player_turn++;
                             Thread.sleep(1000);
                             loop3 = false;
@@ -353,8 +355,10 @@ public class App {
                     }
                 }
                 if (minion_hp > 0 && (player_hp > 0)) {
-                    player_hp=player_hp-minion_attack();
-                    turns[1][minion_turn] = minion_attack();
+                    player_hp = player_hp-minion_attack();
+                    int damage = minion_attack();
+                    player_hp = player_hp-damage;
+                    turns[1][minion_turn] = damage;
                     minion_turn++;
                     System.out.println("Minions hp är nu "+minion_hp);
                     Thread.sleep(1000);
@@ -385,11 +389,17 @@ public class App {
             System.out.println("Vill du se händelseförloppet?");
             String sequence = tb.nextLine();
             if (sequence.equalsIgnoreCase("ja")) {
+                System.out.println("Din skada varje runda:");
                 for (int i = 0; i < player_turn; i++) {
                     System.out.println(i+1+". "+turns[0][i]); 
-                    System.out.println(i+1+". "+turns[1][i]);   
+                      
+                }
+                System.out.println("Minions skada varje runda:");
+                for (int j = 0; j < minion_turn; j++) {
+                    System.out.println(j+1+". "+turns[1][j]); 
                 }
             }    
+            Thread.sleep(5000);
             System.out.println("Vill du fortsätta spela? Ja/Nej");
             spela = tb.nextLine();
         }
