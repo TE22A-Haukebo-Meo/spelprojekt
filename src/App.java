@@ -355,7 +355,6 @@ public class App {
                     }
                 }
                 if (minion_hp > 0 && (player_hp > 0)) {
-                    player_hp = player_hp-minion_attack();
                     int damage = minion_attack();
                     player_hp = player_hp-damage;
                     turns[1][minion_turn] = damage;
